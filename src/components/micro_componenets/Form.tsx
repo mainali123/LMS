@@ -16,7 +16,7 @@ interface InputFormProps {
     value?: string | number | undefined;
 }
 
-function inputForm({
+function InputForm({
                        autoComplete = '',
                        customClass = '',
                        disabled = false,
@@ -28,7 +28,7 @@ function inputForm({
                        pattern = '',
                        placeholder = '',
                        required = false,
-                       tailwindClass = 'h-9 w-full sm:w-64 md:w-80 lg:w-[400px] border border-[#D1D5DC] focus:outline-none rounded-lg',
+                       tailwindClass = 'h-9 w-[100%] border border-[#D1D5DC] focus:outline-none rounded p-2',
                        value
                    }: InputFormProps) {
 
@@ -52,4 +52,4 @@ function inputForm({
     )
 }
 
-export {inputForm}
+export {InputForm}
