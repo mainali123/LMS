@@ -1,7 +1,7 @@
 import React from "react";
 
 import {InputForm} from "../micro_componenets/Form";
-import {DefaultButton} from "../micro_componenets/Buttons";
+import {DefaultButton, SocialLogin} from "../micro_componenets/Buttons";
 
 function LoginPage() {
     return (
@@ -16,9 +16,11 @@ function LoginPage() {
                     <div className={`font-semibold text-[40px] text-[#5C469C]`}>
                         LogiNep
                     </div>
+
                     <div className={`p-3 font-semibold`}>
                         Login to Continue
                     </div>
+
                     <div className={`w-[90%]`}>
                         {InputForm({
                             placeholder: 'Enter your email',
@@ -29,6 +31,7 @@ function LoginPage() {
                             inputType: 'email'
                         })}
                     </div>
+
                     <div className={`pt-3 w-[90%]`}>
                         {InputForm({
                             placeholder: 'Enter your password',
@@ -43,13 +46,24 @@ function LoginPage() {
                     <div className={`pt-3 w-[90%]`}>
                         < DefaultButton buttonName={"Continue"}/>
                     </div>
+
                     <div className={`p-6 font-normal text-[#637188]`}>
                         or continue with:
                     </div>
 
-                    <div>
-
+                    <div className={`w-[90%]`}>
+                        < SocialLogin imageSrc={`./src/assets/images/logos/google.svg`} name={`Google`}/>
                     </div>
+
+                    <a href={`#`} className={`p-4 text-[#5C469C] text-[12px]`}>Already have an LogiNep account? Login</a>
+
+                    <div className={`border-t-2 h-1 w-[80%]`}></div>
+
+                    <div className={`flex flex-row p-4 text-[#5C469C] text-[12px]`}>
+                        <p>I accepted all the</p>
+                        <a href={`#`} className={`ml-1 font-semibold`}>Terms And Conditions</a>
+                    </div>
+
                 </div>
             </div>
         </div>
